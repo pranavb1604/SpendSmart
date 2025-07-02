@@ -3,9 +3,9 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 const isProtectedRoute = createRouteMatcher([
-  "/dashboard(.*)",
+  "/dashboard(.*)",               
   "/account(.*)",
-  "/transaction(.*)",
+  "/transaction(.*)",          // if these routes are used
 ]);
 
 // Create Arcjet middleware
@@ -32,11 +32,10 @@ const aj = arcjet({
 const clerk = clerkMiddleware(async (auth, req) => {
   const { userId } = await auth();
 
-  if (!userId && isProtectedRoute(req)) {
-    const { redirectToSignIn } = await auth();
-    return redirectToSignIn();
+  if (!userId && isProtectedRoute(req)) {            // this is used if a user
+    const { redirectToSignIn } = await auth();       // searches for dashboard
+    return redirectToSignIn();                       // or accnt or trans w/o signing in
   }
-
   return NextResponse.next();
 });
 
