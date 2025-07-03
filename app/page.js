@@ -19,19 +19,25 @@ const LandingPage = () => {
 
       {/* Stats Section */}
       <section className="py-20 bg-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {statsData.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {statsData.map((stat, index) => {
+          const Icon = stat.icon;
+          return (
+            <div key={index} className="text-center flex flex-col items-center">
+              <div className="mb-3">
+                <Icon className="w-8 h-8 text-blue-600 transition duration-300 hover:scale-110" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <div className="text-xl font-semibold text-gray-800">
+                {stat.value}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
 
       {/* Features Section */}
       <section id="features" className="py-20">
@@ -72,7 +78,7 @@ const LandingPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20">
+      {/* <section id="testimonials" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16">
             What Our Users Say
@@ -102,24 +108,23 @@ const LandingPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Take Control of Your Finances?
+             Smarter Spending Starts Now
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of users who are already managing their finances
-            smarter with SpendSmart
+           Take control of your expenses, stay on budget, and make every rupee count — with SpendSmart, free forever.
           </p>
           <Link href="/dashboard">
             <Button
               size="lg"
               className="bg-white text-blue-600 hover:bg-blue-50 animate-bounce"
             >
-              Start Free Trial
+              Get Started — No Cost, No Catch
             </Button>
           </Link>
         </div>

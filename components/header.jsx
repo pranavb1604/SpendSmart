@@ -42,15 +42,15 @@ const Header = async () => {
           <SignedIn>
             <Link
               href="/dashboard"
-              className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
+              className="text-black hover:text-blue-600 flex items-center gap-2 hover:bg-blue-900 transition"
             >
-              <Button variant="outline">
+              <Button >
                 <LayoutDashboard size={18} />
                 <span className="hidden md:inline">Dashboard</span>
               </Button>
             </Link>
             <a href="/transaction/create">
-              <Button className="flex items-center gap-2">
+              <Button>
                 <PenBox size={18} />
                 <span className="hidden md:inline">Add Transaction</span>
               </Button>

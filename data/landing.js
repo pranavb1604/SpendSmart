@@ -8,24 +8,27 @@ import {
 } from "lucide-react";
 
 // Stats Data
+import { Lightbulb, ListChecks, ShieldCheck, Heart } from "lucide-react";
+
 export const statsData = [
   {
-    value: "50K+",
-    label: "Active Users",
+    icon: Lightbulb,
+    value: "Smart Spending",
   },
   {
-    value: "$2B+",
-    label: "Transactions Tracked",
+    icon: ListChecks,
+    value: "Effortless Tracking",
   },
   {
-    value: "99.9%",
-    label: "Uptime",
+    icon: ShieldCheck,
+    value: "Always Reliable",
   },
   {
-    value: "4.9/5",
-    label: "User Rating",
+    icon: Heart,
+    value: "Loved by Users",
   },
 ];
+
 
 // Features Data
 export const featuresData = [
