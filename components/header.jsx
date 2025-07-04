@@ -18,7 +18,8 @@ const Header = async () => {
             alt="SpendSmart Logo"
             width={200}
             height={60}
-            className="h-24 w-auto object-contain -my-2"
+            className="h-16 sm:h-20 md:h-24 w-auto object-contain -my-2"
+
           />
         </Link>
 
