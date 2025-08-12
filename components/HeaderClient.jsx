@@ -14,7 +14,7 @@ const HeaderClient = () => {
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/">
           <Image
-            src="/logonobg.png"
+            src="/logofin.png"
             alt="SpendSmart Logo"
             width={200}
             height={60}
@@ -30,12 +30,6 @@ const HeaderClient = () => {
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Features
-            </a>
-            <a
-              href="#testimonials"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Testimonials
             </a>
           </SignedOut>
         </div>
