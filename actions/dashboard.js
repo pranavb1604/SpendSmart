@@ -154,5 +154,3 @@ export async function getDashboardData() {
 
   return transactions.map(serializeTransaction);
 }
-
-export default dashboard
